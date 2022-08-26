@@ -34,3 +34,12 @@
   - `...`
   - `creator_id`
   - `attendee_id` -->
+
+
+### Things that helped
+
+- dealing with adding `first_name` and `last_name` fields to Devise Sign Up:
+  - https://stackoverflow.com/questions/35668465/devise-unpermitted-parameters
+  - https://stackoverflow.com/questions/31660216/rails-devise-wont-write-first-name-and-last-name-to-my-dbs-user-table-and-keep
+  - https://github.com/heartcombo/devise#strong-parameters
+  
