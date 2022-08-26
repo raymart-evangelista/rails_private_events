@@ -8,3 +8,19 @@
 
 - The project can be found on The Odin Project: https://www.theodinproject.com/lessons/ruby-on-rails-private-events
 
+## Data models
+
+- user can create events
+- user can attend many events
+- an event can be attended by many users
+- events can take place at a specific date and at a location
+
+### Data model setup
+
+- User Model has two types: `host` and `attendee`
+  - `host has_many events`
+  - `attendee belong_to event`
+
+- Event Model
+  - `has_many attendees`
+  - `belongs_to host`
