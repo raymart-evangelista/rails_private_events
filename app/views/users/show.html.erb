@@ -2,3 +2,15 @@
 
 <%# List all the events this specific user has created %>
 <h1>Hi <%= current_user.first_name %>, this is where you will find all your created events</h1>
+
+<% current_user.events.each do |event| %>
+  <div>
+    <b><%= event.name %></b>
+    <br>
+    <i><%= event.description %></i>
+    <br>
+    <p><%= event.event_date %></p>
+    <br>
+    <p><%= event.event_time %></p>
+  </div>
+<% end %>

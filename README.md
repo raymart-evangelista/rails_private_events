@@ -44,3 +44,7 @@
   - https://stackoverflow.com/questions/35668465/devise-unpermitted-parameters
   - https://stackoverflow.com/questions/31660216/rails-devise-wont-write-first-name-and-last-name-to-my-dbs-user-table-and-keep
   - https://github.com/heartcombo/devise#strong-parameters
+
+- dealing with associations:
+  - https://stackoverflow.com/questions/44752772/activemodelunknownattributeerror-unknown-attribute-creator-id-for-event
+  
