@@ -8,7 +8,8 @@
 
 <% @events.each do |event| %>
   <div>
-    <b><%= event.name %></b>
+    
+    <b><%= link_to event.name, event_path(event) %></b>
     <br>
     <i><%= event.description %></i>
     <br>

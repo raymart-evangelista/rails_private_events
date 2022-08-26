@@ -37,6 +37,8 @@
 
 ### Things I learned more about
   - when creating a `show` route aka `object#show`, this corresponds to a view for a specific instance of that object such as `users/(:id)`
+    -https://stackoverflow.com/questions/39113941/no-route-matches-action-show-controller-forum-missing-required-keys
+
 
 ### Things that helped
 
@@ -47,4 +49,4 @@
 
 - dealing with associations:
   - https://stackoverflow.com/questions/44752772/activemodelunknownattributeerror-unknown-attribute-creator-id-for-event
-  
+
