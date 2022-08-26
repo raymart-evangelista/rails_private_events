@@ -1,24 +1,10 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## About
 
-Things you may want to cover:
+- The main learning outcome of this project is to work with Active Record associations and create model relationships that make sense.
 
-* Ruby version
+- The task is to create a site similar to a private Eventbrite which allows users to create events and then mange user signups.
 
-* System dependencies
+- The project can be found on The Odin Project: https://www.theodinproject.com/lessons/ruby-on-rails-private-events
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
