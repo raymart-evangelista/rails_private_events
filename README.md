@@ -35,6 +35,8 @@
   - `creator_id`
   - `attendee_id` -->
 
+### Things I learned more about
+  - when creating a `show` route aka `object#show`, this corresponds to a view for a specific instance of that object such as `users/(:id)`
 
 ### Things that helped
 
@@ -42,4 +44,3 @@
   - https://stackoverflow.com/questions/35668465/devise-unpermitted-parameters
   - https://stackoverflow.com/questions/31660216/rails-devise-wont-write-first-name-and-last-name-to-my-dbs-user-table-and-keep
   - https://github.com/heartcombo/devise#strong-parameters
-  
