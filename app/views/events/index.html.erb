@@ -1,5 +1,11 @@
 <h1>Events#index</h1>
 
+<div>
+  <% if current_user %>
+    <b>Hello <%= current_user.first_name %></b>
+  <% end %>
+</div>
+
 <% @events.each do |event| %>
   <div>
     <b><%= event.name %></b>
