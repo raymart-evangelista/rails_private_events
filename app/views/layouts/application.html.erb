@@ -11,6 +11,11 @@
   </head>
 
   <body>
+    <div>
+      <% if current_user %>
+        <%= button_to "User show page", user_path(current_user.id), method: :get %>
+      <% end %>
+    </div>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= button_to "Home", root_path, method: :get %>
