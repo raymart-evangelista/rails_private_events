@@ -24,3 +24,13 @@
 - Event Model
   - `has_many attendees`
   - `belongs_to host`
+<!-- 
+### Updated relationship model tables
+
+- User table
+  - `...`
+
+- Event table
+  - `...`
+  - `creator_id`
+  - `attendee_id` -->
