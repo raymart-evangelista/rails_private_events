@@ -1,20 +1,22 @@
-<h1>Events#index</h1>
-
-<div>
-  <% if current_user %>
-    <b>Hello <%= current_user.first_name %></b>
+<div class="container">
+  <h1>Events#index</h1>
+  
+  <div>
+    <% if current_user %>
+      <b>Hello <%= current_user.first_name %></b>
+    <% end %>
+  </div>
+  
+  <% @events.each do |event| %>
+    <div>
+  
+      <b><%= link_to event.name, event_path(event) %></b>
+      <br>
+      <i><%= event.description %></i>
+      <br>
+      <p><%= event.event_date %></p>
+      <br>
+      <p><%= event.event_time %></p>
+    </div>
   <% end %>
 </div>
-
-<% @events.each do |event| %>
-  <div>
-    
-    <b><%= link_to event.name, event_path(event) %></b>
-    <br>
-    <i><%= event.description %></i>
-    <br>
-    <p><%= event.event_date %></p>
-    <br>
-    <p><%= event.event_time %></p>
-  </div>
-<% end %>
