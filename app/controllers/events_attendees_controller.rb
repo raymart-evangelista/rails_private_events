@@ -1,0 +1,3 @@
+class EventsAttendeesController < ApplicationController
+  
+end
