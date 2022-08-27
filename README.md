@@ -47,6 +47,8 @@
   - https://stackoverflow.com/questions/31660216/rails-devise-wont-write-first-name-and-last-name-to-my-dbs-user-table-and-keep
   - https://github.com/heartcombo/devise#strong-parameters
 
-- dealing with associations:
+- dealing with associations for events and creators:
   - https://stackoverflow.com/questions/44752772/activemodelunknownattributeerror-unknown-attribute-creator-id-for-event
 
+- dealing with associations for events and attendees:
+  - https://hackernoon.com/why-do-we-need-a-through-table-explained-with-rails-w81m3wxw
