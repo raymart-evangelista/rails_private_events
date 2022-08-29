@@ -6,6 +6,6 @@ class Event < ApplicationRecord
   # has_many :event_attendees, foreign_key: "attendee_event_id"
   # has_many :attendees, through: :event_attendees, source: :event_attendee
   has_many :event_attendees, foreign_key: "event_id"
-  has_many :attendees, through: :event_attendees, source: event
+  has_many :attendees, through: :event_attendees, source: :event
 
 end

@@ -1,13 +1,26 @@
-<h1>Event details</h1>
+<div class="container">
+  <h1>Event details</h1>
+  
+    <div>
+      <b><%= @event.name %></b>
+      <br>
+      <i><%= @event.description %></i>
+      <br>
+      <p><%= @event.event_date %></p>
+      <br>
+      <p><%= @event.event_time %></p>
+      <br>
+      <i>Posted by <%= @event.creator.first_name %> <%= @event.creator.last_name %> at <%= @event.created_at%></i>
+    </div>
+</div>
+<br>
+<div class="container">
+  <%# if current user isn't already attending event %>
+  <% if current_user %>
+    <%= button_to "Attend Event?", create_attending_event_path({user_id: current_user.id}) %>
+  <% end %>
+  <%# else if it's a current user who is already attending event %>
+</div>
 
-  <div>
-    <b><%= @event.name %></b>
-    <br>
-    <i><%= @event.description %></i>
-    <br>
-    <p><%= @event.event_date %></p>
-    <br>
-    <p><%= @event.event_time %></p>
-    <br>
-    <i>Posted by <%= @event.creator.first_name %> <%= @event.creator.last_name %> at <%= @event.created_at%></i>
-  </div>
+<%# show host %>
+<%# show all attendees %>
