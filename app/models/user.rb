@@ -6,7 +6,7 @@ class User < ApplicationRecord
   has_many :events, foreign_key: "creator_id", class_name: "Event"
 
   # has many events attending through AttendeeEvent
-  has_many :attendee_events
+  has_many :attendee_events, class_name: "AttendeeEvent"
   has_many :attended_events, through: :attendee_events, foreign_key: "event_id", source: :event
 
   devise :database_authenticatable, :registerable,
