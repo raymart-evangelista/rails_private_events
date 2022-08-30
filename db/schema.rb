@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_08_30_015306) do
+ActiveRecord::Schema[7.0].define(version: 2022_08_30_031411) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "attendee_events", force: :cascade do |t|
-    t.integer "attendee_id"
+    t.integer "event_attendee_id"
     t.integer "event_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
