@@ -7,7 +7,7 @@ class User < ApplicationRecord
 
   # has many events attending through AttendeeEvent
   has_many :attendee_events, class_name: "AttendeeEvent"
-  has_many :attended_events, through: :attendee_events, foreign_key: "event_id", source: :event
+  has_many :attended_events, through: :attendee_events, foreign_key: "attendee_id", source: :event
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
