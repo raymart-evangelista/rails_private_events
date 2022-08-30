@@ -52,3 +52,7 @@
 
 - dealing with associations for events and attendees:
   - https://hackernoon.com/why-do-we-need-a-through-table-explained-with-rails-w81m3wxw
+
+- understanding through associations:
+  - https://www.youtube.com/watch?v=Cj1FhPy9sz4
+  
