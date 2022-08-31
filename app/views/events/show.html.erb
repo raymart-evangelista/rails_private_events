@@ -15,13 +15,28 @@
 </div>
 <br>
 <div class="container">
-  <%# if current user isn't already attending event %>
   <% if current_user %>
-    <%#= button_to "Attend Event?", create_attending_event_path({user_id: current_user.id}) %>
-    <%= button_to "Attend Event?", attendees_events_path(user_id: current_user.id, id: @event.id) %>
+    <%= button_to "Attend Event?", 
+      attendees_events_path(user_id: current_user.id, id: @event.id), 
+      disabled: current_user.attended_event_ids.include?(@event.id)%>
   <% end %>
-  <%# else if it's a current user who is already attending event %>
 </div>
 
-<%# show host %>
+<%# show event creator %>
+<div class="container">
+  <h1>Event creator</h1>
+  <%= @event.creator.first_name %>
+</div>
+
 <%# show all attendees %>
+<div class="container">
+  <h1>Event attendees</h1>
+  <% @event.attendees.each do |attendee| %>
+    <p>
+      <%= attendee.first_name %>
+      <%= attendee.last_name %>
+    </p>
+    <br>
+  <% end %>
+  
+</div>
