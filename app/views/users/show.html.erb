@@ -19,20 +19,40 @@
 <br>
 <div class="container">
   <h3>Previously attended events</h3>
-  <h3>Upcoming attending events</h3>
   <br>
-  <div class="row">
-    <% current_user.attended_events.each do |event| %>
-      <div class="col-sm-6">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title"><%= link_to event.name, event_path(event) %></h5>
-            <p class="card-text"><%= event.description %></p>
-            <p class="card-text"><%= event.event_date.strftime("%A, %B #{event.event_date.day.ordinalize} %Y @ %l:%M %p") %></p>
-            <%# <a href="#" class="btn btn-primary">Go somewhere</a> %>
+  <% current_user.attended_events.each do |event| %>
+    <% if event.event_date < Time.now %>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title"><%= link_to event.name, event_path(event) %></h5>
+              <p class="card-text"><%= event.description %></p>
+              <p class="card-text"><%= event.event_date.strftime("%A, %B #{event.event_date.day.ordinalize} %Y @ %l:%M %p") %></p>
+            </div>
           </div>
         </div>
       </div>
     <% end %>
-  </div>
+  <% end %>
+</div>
+<br>
+<div class="container">
+  <h3>Upcoming attending events</h3>
+  <br>
+  <% current_user.attended_events.each do |event| %>
+    <% if event.event_date > Time.now %>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title"><%= link_to event.name, event_path(event) %></h5>
+              <p class="card-text"><%= event.description %></p>
+              <p class="card-text"><%= event.event_date.strftime("%A, %B #{event.event_date.day.ordinalize} %Y @ %l:%M %p") %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
 </div>
