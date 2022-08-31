@@ -60,3 +60,8 @@
 
 - 2.9, 3.1, 3.2: https://guides.rubyonrails.org/routing.html#creating-paths-and-urls-from-objects
   
+### Ruby Datetime
+
+- https://www.tutorialspoint.com/ruby/ruby_date_time.htm
+- https://railsdatetimeformats.com/
+

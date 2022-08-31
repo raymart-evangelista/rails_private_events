@@ -1,9 +1,7 @@
-<div class="container">
-  <h1>Events#index</h1>
-  
+<div class="container">  
   <div>
     <% if current_user %>
-      <b>Hello <%= current_user.first_name %></b>
+      <h3><b>Hello <%= current_user.first_name %></b></h3>
     <% end %>
   </div>
   
@@ -14,9 +12,7 @@
       <br>
       <i><%= event.description %></i>
       <br>
-      <p><%= event.event_date %></p>
-      <br>
-      <p><%= event.event_time %></p>
+      <p><%= event.event_date.strftime("%A, %B #{event.event_date.day.ordinalize} %Y @ %l:%M %p") %></p>
     </div>
   <% end %>
 </div>

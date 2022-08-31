@@ -6,11 +6,9 @@
       <br>
       <i><%= @event.description %></i>
       <br>
-      <p><%= @event.event_date %></p>
+      <p><%= @event.event_date.strftime("%A, %B #{@event.event_date.day.ordinalize} %Y @ %l:%M %p") %></p>
       <br>
-      <p><%= @event.event_time %></p>
-      <br>
-      <i>Posted by <%= @event.creator.first_name %> <%= @event.creator.last_name %> at <%= @event.created_at%></i>
+      <i>Posted by <%= @event.creator.first_name %> <%= @event.creator.last_name %></i>
     </div>
 </div>
 <br>
