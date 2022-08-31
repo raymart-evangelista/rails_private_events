@@ -65,3 +65,6 @@
 - https://www.tutorialspoint.com/ruby/ruby_date_time.htm
 - https://railsdatetimeformats.com/
 
+### Associations
+
+- https://joshfrankel.me/blog/create-a-many-to-many-activerecord-association-in-ruby-on-rails/
