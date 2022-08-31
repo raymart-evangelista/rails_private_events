@@ -17,7 +17,8 @@
 <div class="container">
   <%# if current user isn't already attending event %>
   <% if current_user %>
-    <%= button_to "Attend Event?", create_attending_event_path({user_id: current_user.id}) %>
+    <%#= button_to "Attend Event?", create_attending_event_path({user_id: current_user.id}) %>
+    <%= button_to "Attend Event?", attendees_events_path(user_id: current_user.id, id: @event.id) %>
   <% end %>
   <%# else if it's a current user who is already attending event %>
 </div>

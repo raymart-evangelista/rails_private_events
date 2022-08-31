@@ -55,4 +55,8 @@
 
 - understanding through associations:
   - https://www.youtube.com/watch?v=Cj1FhPy9sz4
+
+### Routing help
+
+- 2.9, 3.1, 3.2: https://guides.rubyonrails.org/routing.html#creating-paths-and-urls-from-objects
   
