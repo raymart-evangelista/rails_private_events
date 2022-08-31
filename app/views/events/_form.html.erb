@@ -12,7 +12,7 @@
     <div>
       <%= form.label :description %>
       <br>
-      <%= form.text_area :description, placeholder: "Please describe the event", size: "30x30" %>
+      <%= form.text_area :description, placeholder: "Please describe the event", size: "30x20" %>
       <% event.errors.full_messages_for(:description).each do |message| %>
         <div><%= message %></div>
       <% end %>

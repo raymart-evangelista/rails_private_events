@@ -1,18 +1,39 @@
 <div class="container">
-  <h1>show</h1>
-  
-  <%# List all the events this specific user has created %>
-  <h1>Hi <%= current_user.first_name %>, this is where you will find all your created events</h1>
-  
-  <% current_user.events.each do |event| %>
-    <div>
-      <b><%= event.name %></b>
-      <br>
-      <i><%= event.description %></i>
-      <br>
-      <p><%= event.event_date %></p>
-      <br>
-      <p><%= event.event_time %></p>
-    </div>
-  <% end %>
+  <h3>Hosted events</h3>
+  <br>
+  <div class="row">
+    <% current_user.events.each do |event| %>
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title"><%= link_to event.name, event_path(event) %></h5>
+            <p class="card-text"><%= event.description %></p>
+            <p class="card-text"><%= event.event_date %></p>
+            <p class="card-text"><%= event.event_time %></p>
+            <%# <a href="#" class="btn btn-primary">Go somewhere</a> %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+<br>
+<div class="container">
+  <h3>Attended events</h3>
+  <br>
+  <div class="row">
+    <% current_user.attended_events.each do |event| %>
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title"><%= link_to event.name, event_path(event) %></h5>
+            <p class="card-text"><%= event.description %></p>
+            <p class="card-text"><%= event.event_date %></p>
+            <p class="card-text"><%= event.event_time %></p>
+            <%# <a href="#" class="btn btn-primary">Go somewhere</a> %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>
