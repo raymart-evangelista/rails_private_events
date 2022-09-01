@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_08_31_023854) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_01_025644) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -28,13 +28,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_31_023854) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "creator_id"
-  end
-
-  create_table "events_attendees", force: :cascade do |t|
-    t.integer "event_id"
-    t.integer "attendee_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
