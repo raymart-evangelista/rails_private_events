@@ -1,2 +1,5 @@
-<h1 class="container">Edit event</h1>
+<div class="container">
+  <h1>Edit event</h1>
+  <%= button_to "Delete event", event_path(@event), method: :delete %>
+</div>
 <%= render "form", event: @event %>
