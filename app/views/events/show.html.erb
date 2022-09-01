@@ -14,9 +14,14 @@
 <br>
 <div class="container">
   <% if current_user %>
-    <%= button_to "Attend Event?", 
+    <%= button_to "Attend Event", 
       attendees_events_path(user_id: current_user.id, id: @event.id), 
       disabled: current_user.attended_event_ids.include?(@event.id)%>
+    <%#= button_to "Unattend Event", attendees_event_path(user_id: current_user.id, id: @event.id), disabled: current_user.attended_event_ids.exclude?(@event.id) %>
+    <%= button_to "Unattend Event", 
+      attendees_event_path(user_id: current_user.id, id: @event.id), 
+      method: :delete, 
+      disabled: current_user.attended_event_ids.exclude?(@event.id) %>
   <% end %>
 </div>
 

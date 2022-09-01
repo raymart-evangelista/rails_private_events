@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources :events, only: [:index, :new, :create, :show, :edit, :update, :destroy]
   resources :users, only: [:show]
-  resources :attendees_events, only: [:create, :new]
+  resources :attendees_events, only: [:create, :new, :destroy]
 
   root "events#index"
 
@@ -12,4 +12,5 @@ Rails.application.routes.draw do
 
   post '/users/:current_user.id/events/:id', to: 'attendees_events#create'
   # post '/events/:id/edit', to: 'events#edit'
+  delete '/users/:current_user.id/events/:id', to: 'attendees_events#destroy'
 end
