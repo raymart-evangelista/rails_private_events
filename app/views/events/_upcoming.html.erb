@@ -6,9 +6,10 @@
       <div class="col-sm-6">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title"><%= link_to event.name, event_path(event) %></h5>
-            <p class="card-text"><%= event.description %></p>
+            <h3 class="card-title"><%= link_to event.name, event_path(event) %></h3>
             <p class="card-text"><%= event.event_date.strftime("%A, %B #{event.event_date.day.ordinalize} %Y @ %l:%M %p") %></p>
+            <p class="card-text"><%= event.description %></p>
+            <p class="card-text font-italic font-weight-light">Hosted by <%= event.creator.first_name %> <%= event.creator.last_name %></p>
           </div>
         </div>
       </div>

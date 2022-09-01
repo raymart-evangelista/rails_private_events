@@ -6,7 +6,7 @@ class Event < ApplicationRecord
   has_many :attendee_events, foreign_key: :event_id
   has_many :attendees, through: :attendee_events, source: :event_attendee
 
-  scope :past, -> { where("event_date < NOW()") }
+  scope :past, -> { where("event_date < NOW()").order("event_date desc") }
 
-  scope :upcoming, -> { where("event_date > NOW()") }
+  scope :upcoming, -> { where("event_date > NOW()").order("event_date asc") }
 end
