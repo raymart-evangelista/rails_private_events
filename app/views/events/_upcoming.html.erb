@@ -1,0 +1,17 @@
+<div class="container">
+  <h3>Upcoming events</h3>
+  <br>
+  <% Event.upcoming.each do |event| %>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title"><%= link_to event.name, event_path(event) %></h5>
+            <p class="card-text"><%= event.description %></p>
+            <p class="card-text"><%= event.event_date.strftime("%A, %B #{event.event_date.day.ordinalize} %Y @ %l:%M %p") %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
