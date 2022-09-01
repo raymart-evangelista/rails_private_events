@@ -20,6 +20,14 @@
   <% end %>
 </div>
 
+<%# edit event details if creator %>
+<div class="container">
+  <% if @event.creator.eql?(current_user) %>
+  <%= button_to "Edit event details", edit_event_path, method: :get %>
+  <% end %>
+</div>
+
+
 <%# show event creator %>
 <div class="container">
   <h1>Event creator</h1>
